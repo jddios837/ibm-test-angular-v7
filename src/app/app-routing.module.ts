@@ -6,8 +6,4 @@ export const routes: Routes = [
   { path: 'form', loadChildren: './form/form.module#FormModule' },
 ];
 
-// @NgModule({
-//   imports: [RouterModule.forRoot(routes)],
-//   exports: [RouterModule]
-// })
 export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(routes, {useHash: true});

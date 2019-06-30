@@ -1,3 +1,30 @@
-<p>
-  form works!
-</p>
+
+<div class="form-container">
+  <mat-card>
+    <mat-card-title>
+      <h4>Ingrese sus datos</h4>
+    </mat-card-title>
+
+    <mat-card-content>
+      <form fxLayout="column" [formGroup]="userForm" name="form">
+
+          <!-- <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto"> -->
+        <div class="input-row">
+          <mat-form-field appearance="outline" fxFlex="100">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="userName" required>
+              <!-- <mat-icon matSuffix class="disabled-text">domain</mat-icon> -->
+              <mat-error>El Nombre es requerido</mat-error>
+          </mat-form-field>
+        </div>
+          <!-- </div> -->
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button  mat-button aria-label="SAVE">
+          Guardar
+        </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

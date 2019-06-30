@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-form',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  userForm: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder) { 
+
+    this.userForm = this.createTrackingForm();
+  }
 
   ngOnInit() {
+  }
+
+  /**
+   * Create cuenta form
+   *
+   * @returns {FormGroup}
+   */
+  createTrackingForm(): FormGroup {
+    return this._formBuilder.group({
+      userId: [''],
+      userName: ['']
+    });
   }
 
 }
