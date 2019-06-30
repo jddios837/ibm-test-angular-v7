@@ -8,7 +8,15 @@
     <mat-card-content>
       <form fxLayout="column" [formGroup]="userForm" name="form">
 
-          <!-- <div fxLayout="row" fxLayoutAlign="start center" fxFlex="1 0 auto"> -->
+        <div class="input-row">
+          <mat-form-field appearance="outline" fxFlex="100">
+              <mat-label>Numero de Documento</mat-label>
+              <input matInput formControlName="userDocument" required stringHide [hideLength]="2">
+              <!-- <mat-icon matSuffix class="disabled-text">domain</mat-icon> -->
+              <mat-error>El Numero de Documento es requerido</mat-error>
+          </mat-form-field>
+        </div>
+
         <div class="input-row">
           <mat-form-field appearance="outline" fxFlex="100">
               <mat-label>Nombre</mat-label>
@@ -17,6 +25,7 @@
               <mat-error>El Nombre es requerido</mat-error>
           </mat-form-field>
         </div>
+        
           <!-- </div> -->
 
       </form>

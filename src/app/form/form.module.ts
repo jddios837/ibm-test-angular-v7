@@ -10,9 +10,10 @@ import { MatCardModule, MatFormFieldModule } from '@angular/material';
 import { routing } from "./form.routing";
 
 import { FormComponent } from './form/form.component';
+import { HideDirective } from "./directives/hide.directive";
 
 @NgModule({
-  declarations: [FormComponent],
+  declarations: [FormComponent, HideDirective],
   imports: [
     CommonModule,
 
