@@ -8,6 +8,14 @@ import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+
+
+// Store
+import { Store } from "store";
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,9 +25,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     HttpClientModule,
 
+    AngularFireModule.initializeApp(environment.firebase),
+ 	  AngularFirestoreModule,
+
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Store
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

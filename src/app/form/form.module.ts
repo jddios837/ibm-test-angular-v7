@@ -4,7 +4,12 @@ import { CommonModule } from '@angular/common';
 import { MatInputModule } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatCardModule, MatFormFieldModule } from '@angular/material';
+import { 
+  MatCardModule, 
+  MatFormFieldModule,
+  MatButtonModule,
+  MatSnackBarModule
+} from '@angular/material';
 
 
 import { routing } from "./form.routing";
@@ -21,6 +26,8 @@ import { HideDirective } from "./directives/hide.directive";
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule, 
+    MatButtonModule,
+    MatSnackBarModule,
 
     MatCardModule,
 
